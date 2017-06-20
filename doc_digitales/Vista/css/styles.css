@@ -1,0 +1,180 @@
+/********** Base styles **********/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Oxygen', sans-serif;
+}
+
+body{
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+}
+
+/************************************ HEADER ************************************/
+#header-nav{
+	background-color: #075298;
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0 4px 2px -2px gray;
+}
+
+#logo-img {
+  background: url('../images/logo-lg.png') no-repeat;
+  width: 162px;
+  height: 158px;
+  margin: 10px 15px 10px 0;
+}
+
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /* Company name */
+  font-family: 'Lora', serif;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #fff;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #6199FB;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #fff;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+#logSession{
+
+	color: #fff;
+  font-size: 20px;
+  margin-top: 10px;	
+
+}
+
+/************************************* END HEADER *************************************/
+
+
+
+/*************************************MAIN CONTENT*************************************/
+
+#tituloPagina{
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+
+}
+
+.warning{
+
+	border-radius: 0;
+	border-color: red;
+
+}
+
+
+/************************************ END MAIN CONTENT *************************************/
+
+/************************************ FOOTER ************************************/
+
+.panel-footer{
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #041E4D; /*052B6D*/
+	border-top: 0;
+	color: #fff;
+}
+
+
+/************************************ END FOOTER *************************************/
+
+/************************************ OTHER DEVICES ************************************/
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+	/* Header */
+	.navbar-brand {
+		padding-top: 10px;
+	    height: 80px;
+	}
+	.navbar-brand h1 { 
+	    padding-top: 10px;
+	    font-size: 5vw; /* 1vw = 1% of viewport width */
+	}
+	#nav-list a {
+		text-align: left;
+	}
+	  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span { /* Collapsed nav menu glyph */
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+	/* End Header */
+
+	/****Footer****/
+	.panel-footer section{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.panel-footer section hr{
+		margin-right: auto;
+		margin-left: auto;
+		width: 70%;
+	}
+
+}
+
+
+/*BOOTSTRAP PLUG IN*/
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+

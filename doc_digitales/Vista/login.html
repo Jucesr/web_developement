@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>docDigitales</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+  <header>
+	 <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left ">
+            <div id="logo-img"></div>
+          </a>
+          <div class="navbar-brand">
+                  <a href="index.html">
+                    <h1 class='visible-lg visible-xs'>Documentos digitales</h1>
+                  </a>
+                </div>
+              <button id="navarButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+        </div> <!-- END OF NAVBAR-HEADER -->
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+              <ul id="nav-list" class="nav navbar-nav navbar-right">
+                  <li>
+                    <a id="home" href="index.html">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <br class="hidden-xs"> 
+                        Home
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logIn" href="login.html">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        <br class="hidden-xs"> 
+                        Iniciar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="register" href="registro.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Registrarse
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logOut" href="#">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        <br class="hidden-xs"> 
+                        Cerrar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newSuc" href="registroSucursal.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva sucursal
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newEmp" href="registroEmpleado.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva empleado
+                    </a>
+                  </li>
+                  <li>
+                    <a id="lstSuc" href="listaSucursales.html">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <br class="hidden-xs"> 
+                        Lista sucursales 
+                    </a>
+                  </li>
+              </ul><!-- #nav-list -->
+            </div><!-- END OF collapse .navbar-collapse -->
+      </div>
+    </nav>
+	</header>
+
+
+  <div id="main-content" class="container">
+
+  <h2 id="tituloPagina"> Inicio de sesion</h2>
+
+    <!-- FORMULARIO -->
+    <div class="col-sm-8 contact-form">
+      <div class="form-horizontal" >
+        
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-3">E-mail</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail" >
+          </div>
+        </div>
+        
+        <!-- Password -->
+        <div class="form-group">
+          <label for="inputTel" class="col-sm-3 ">Contraseña</label>
+          <div class="col-sm-9">
+            <input type="password" class="form-control" id="inputPassword" >
+          </div>
+        </div>
+        
+       
+        <!-- BUTTON -->
+        <button id="btn_login" class="btn-lg btn btn-success col-sm-offset-7">Iniciar Sesion</button>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  	<footer class="panel-footer">
+  		<div class="container">
+  			<div class="row">
+  				<section id="info" class="col-sm-8">
+  					<span>Practica realizada como parte de prueba de conocimientos para la empresa docDigitales</span>
+  					<hr class="visible-xs">
+  				</section>
+  				<section id="contact" class="col-sm-4">
+  					<p>Correo electronico: jcom.94m@gmail.com</p>
+            <p>Telefono: (686) 177-9471</p>
+  				</section>
+  			</div>
+  			<div class="text-center">&copy; Derechos reservados Julio Ojeda 2017</div>
+  			
+  		</div>
+  	</footer> <!-- End of the footer -->
+  	
+
+  </div>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+   <script>  
+
+    $(document).ready(function(){
+
+    //REVISA SI HAY ALGUNA SESION ACTIVA
+    if(localStorage.getItem("personlogged") != null && localStorage.getItem("personlogged") != 'undefined' && localStorage.getItem("personlogged") != 'null' && localStorage.getItem("personlogged") != undefined ){
+
+       $("#home").hide();
+       $("#logIn").hide();
+       $("#register").hide();
+
+    }else{
+
+
+      $("#logOut").hide();
+      $("#logIn").hide();
+      $("#newEmp").hide();
+      $("#newSuc").hide();
+      $("#lstSuc").hide();
+    }  
+
+    //SI CIERRA SESION
+     $("#logOut").click(function(){
+
+      localStorage.setItem("personlogged",undefined);
+      window.location.href = "index.html";
+
+     });
+
+
+    $("#btn_login").click(function(){
+      
+      var email = $("#inputEmail").val();
+      var password = $("#inputPassword").val();
+      
+      var warning = false;
+      var waningMessage;
+      
+      //CAMPOS VACIOS
+
+     
+
+      if( !email ){
+        $("#inputEmail").addClass('warning');
+        warning = true;
+        waningMessage = "Campos Vacios";
+      }else
+         $("#inputEmail").removeClass('warning');
+
+      
+      if( !password ){
+        $("#inputPassword").addClass('warning');
+        warning = true;
+        waningMessage = "Campos Vacios";
+      }else
+         $("#inputPassword").removeClass('warning');
+
+
+
+
+      if( warning ){
+        //MENSAJE DE QUE ALGO SALIO MAL
+        alert(waningMessage);
+
+      }else{
+
+        //SE COMUNICA CON EL SERVIDOR
+
+        $.ajax({
+          data: { 
+                email : email ,
+                password : password },
+          url: '../Controlador/controladorPersona.php?opc=1',
+          method: 'POST', // or GET
+          success: function(msg) {
+           
+            if (msg != false){
+               //SI TODO SALE BIEN
+              console.log(msg);
+              var persona = JSON.parse(msg);
+              console.log(persona);
+              localStorage.setItem("personlogged", JSON.stringify(persona));
+              alert('Bienvenid@ '+ persona.nombre);
+              window.location.href = "listaSucursales.html";
+
+              //Limpia campos
+            $("#inputEmail").val('');
+            $("#inputPassword").val('');
+            }else{
+              //Datos incorrectos
+              alert('Datos incorrectos ');
+
+            }
+            
+          }
+         });
+
+      }
+
+    });
+
+});
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>docDigitales</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+  <header>
+	 <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left ">
+            <div id="logo-img"></div>
+          </a>
+          <div class="navbar-brand">
+                  <a href="index.html">
+                    <h1 class='visible-lg visible-xs'>Documentos digitales</h1>
+                    <div id="logSession"></div>
+                  </a>
+                </div>
+              <button id="navarButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+        </div> <!-- END OF NAVBAR-HEADER -->
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+              <ul id="nav-list" class="nav navbar-nav navbar-right">
+                  <li>
+                    <a id="home" href="index.html">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <br class="hidden-xs"> 
+                        Home
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logIn" href="login.html">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        <br class="hidden-xs"> 
+                        Iniciar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="register" href="registro.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Registrarse
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logOut" href="#">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        <br class="hidden-xs"> 
+                        Cerrar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newSuc" href="registroSucursal.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva sucursal
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newEmp" href="registroEmpleado.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva empleado
+                    </a>
+                  </li>
+                  <li>
+                    <a id="lstSuc" href="listaSucursales.html">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <br class="hidden-xs"> 
+                        Lista sucursales 
+                    </a>
+                  </li>
+              </ul><!-- #nav-list -->
+            </div><!-- END OF collapse .navbar-collapse -->
+      </div>
+    </nav>
+	</header>
+
+
+  <div id="main-content" class="container">
+    <h2>Descripción de la prueba</h2>
+    <br>
+    <div>
+      Se requiere hacer una aplicacion desarrollada con Ruby On Rails y MySQL que cumpla con
+      la siguiente funcionalidad.
+    </div>
+    <br>
+    <div>
+      El sistema debe tener un modo de autentificacion por el cual el usuario pueda registrarse si
+      no tiene cuenta o iniciar sesion si ya cuenta con una.
+    </div>
+    <h3>Registro</h3>
+    <br>
+    <div>
+      La forma de registro debera requerir el nombre completo de la persona, correo electronico,
+      rfc, nombre de la empresa, password y confirmacion del password.
+    </div>
+    <br>
+    <div>
+      Todos los campos son requeridos
+    </div>
+    <br>
+    <div>
+      1. En caso de que un campo este vacio, se debera indicar al usuario que un campo esta
+      vacio e indicandolo con un color rojo en los bordes.
+    </div>
+    <div>
+      2. En caso de que el password y la confirmacion no sean iguales, indicarlo de misma
+      manera que en el punto anterior.
+    </div>
+    <div>   
+      3. Estas validaciones se deberan hacer por medio de javascript (puro, jquery o coffee
+      script) no obtrusivo.
+    </div>
+    <br>
+    <h3>Inicio de Sesion</h3>
+    <br>
+    <div>
+      La forma de inicio de sesion debera requerir el correo electronico de la persona y el
+      password.
+    </div>
+    <br>
+    <div>
+      Todos los campos son requeridos
+    </div>
+    <br>
+    <div>
+     1. En caso de que un campo este vacio, se debera indicar al usuario que un campo esta
+    vacio e inidcandolo con un color rojo en los bordes.
+    </div>
+    <div>
+      2. Si el correo electronico de la persona y el password no coinciden, indicar mediante un
+      mensaje que los valores introducidos no coinciden con los registrados en el sistema.
+    </div>
+
+
+    <h3>Administracion</h3>
+    <br>
+    <div>
+     Una vez que el usuario este dentro del sistema, se mostraran las opciones:
+    </div>
+    <br>
+    <div>
+     1. Registrar Sucursal
+    </div>
+    <div>
+      2. Registrar Empleados de la Sucursal
+    </div>
+    <br>
+
+    <div>
+      Se mostrara tambien en la pagina principal, junto a las opciones, un listado con los nombres
+      de las sucursales dadas de alta, el numero de empleados que estas contienen y una opcion
+      para editar las sucursales. Si no hay sucursales registradas indicar que no las hay en lugar
+      de mostrar un listado sin registros.
+    </div>
+
+    <br>
+
+    <h3>Registrar Sucursal</h3>
+    <br>
+    <div>
+      La forma de registro de una sucursal debera tener los siguientes campos: nombre de la
+      sucursal (para poder diferenciarlas), nombre de la calle, nombre de la colonia, numero
+      exterior, numero interior, codigo postal, ciudad y pais.
+    </div>
+    <br>
+    <div>
+      Se debera validar del lado del cliente:
+    </div>
+    <br>
+    <div>
+      1. El nombre de la sucursal no este vacio
+    </div>
+    <div>
+      2. Si existe un numero interior y/o exterior, se valide que sean numeros
+    </div>
+    <div>
+      3. Si existe un codigo postal, se valide que sea solo numeros
+    </div>
+    <br>
+
+    <div>   
+      En la misma forma de registro de la sucursal, se podran tambien registar hasta 5 empleados.
+    </div>
+
+    <br>
+
+
+    <h3>Registrar Empleados de la Sucursal</h3>
+    <br>
+    <div>
+      La forma de registro de debera tener un select box donde se pueda elegir la empresa en la
+      cual se va a registrar al empleado. El nombre del empleado, el RFC y su nombre de puesto.
+    </div>
+    <br>
+    <div>
+      Se debera validar del lado del cliente:
+    </div>
+    <br>
+    <div>
+      1. El nombre del empleado no este vacio, de ser asi indicarlo de la misma manera que
+      en los puntos anteriores.
+    </div>
+    <div>
+      2. El RFC no este vacio.
+    </div>
+    <div>
+      3. Se haya seleccionado una de las empresas del select box
+    </div>
+    <br>
+
+    <h3>Edicion de una Sucursal</h3>
+    <br>
+
+    <div>
+      La pagina de edicion de una sucursal mostrara todos los campos del modelo de sucursal y
+      contendra las mismas validaciones del lado del cliente que la forma de registro. En lugar de
+      mostrar formas de edicion de los empleados en la misma forma, mostrar una tabla con un
+      listado de empleados, la cual contenga el nombre del empleado, su RFC, nombre del puesto
+      (si esta registrado) y una liga para editar el empleado.
+    </div>
+
+    <br>
+
+    <h3>Edicion de un Empleado</h3>
+    <br>
+    <div>
+      La forma de edicion de un empleado tiene los mismos campos que el registro del mismo. Es
+      decir, se podra actualizar su nombre, su puesto y la sucursal donde trabaja. Su RFC no
+      podra editarse.
+    </div>
+    <br>
+    <div>
+      Se debera validar del lado del cliente:
+    </div>
+    <br>
+    <div>
+      1. El nombre del empleado no este vacio
+    </div>
+    <div>
+      2. Haya una empresa seleccionada en el selectbox
+    </div>
+
+    <br>
+
+    <h3>Notas de ayuda</h3>
+    <br>
+     <div>
+      1. El registro al sistema es de un usuario y de su empresa
+    </div>
+    <div>
+      2. La empresa puede tener N sucursales
+    </div>
+     <div>
+      3. Cada sucursal puede tener N empleados
+    </div>
+    <div>
+      4. Siempre que un campo requerido este vacio a la hora de la validacion, se debera de
+      indicar que ese campo es requerido pintando los bordes de ese campo con rojo y
+      mostrar un mensaje indicando que los campos en rojo son requeridos.
+    </div>
+
+
+    <div id=""> </div>
+  </div>
+
+  
+
+  	<footer class="panel-footer">
+  		<div class="container">
+  			<div class="row">
+  				<section id="info" class="col-sm-8">
+  					<span>Practica realizada como parte de prueba de conocimientos para la empresa docDigitales</span>
+  					<hr class="visible-xs">
+  				</section>
+  				<section id="contact" class="col-sm-4">
+  					<p>Correo electronico: jcom.94m@gmail.com</p>
+            <p>Telefono: (686) 177-9471</p>
+  				</section>
+  			</div>
+  			<div class="text-center">&copy; Derechos reservados Julio Ojeda 2017</div>
+  			
+  		</div>
+  	</footer> <!-- End of the footer -->
+  	
+
+  </div>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+   <script>  
+
+    $(document).ready(function(){
+
+    //REVISA SI HAY ALGUNA SESION ACTIVA
+    console.log(localStorage.getItem("personlogged"));
+    if(localStorage.getItem("personlogged") != null && localStorage.getItem("personlogged") != 'undefined' && localStorage.getItem("personlogged") != 'null' && localStorage.getItem("personlogged") != undefined ){
+      //SI HAY SESION
+       $("#home").hide();
+       $("#logIn").hide();
+       $("#register").hide();
+       
+
+      var persona = JSON.parse(localStorage.getItem("personlogged"))
+      $("#logSession").html('En sesion como: '+ persona.nombre);
+
+    }else{
+      //NO HAY SESION
+      $("#home").hide();
+      $("#logOut").hide();
+      $("#newEmp").hide();
+      $("#newSuc").hide();
+      $("#lstSuc").hide();
+    }
+
+
+    //SI CIERRA SESION
+     $("#logOut").click(function(){
+
+      localStorage.setItem("personlogged",null);
+      window.location.href = "index.html";
+
+     });
+    
+
+    // var persona = JSON.parse(localStorage.getItem("personlogged"))
+    // $("#logSession").html('En sesion como: '+ persona.nombre);
+
+    });
+  </script>
+
+</body>
+</html>

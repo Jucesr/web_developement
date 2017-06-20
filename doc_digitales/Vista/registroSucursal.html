@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>docDigitales</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	</head>
+<body>
+  <header>
+	 <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="pull-left ">
+            <div id="logo-img"></div>
+          </a>
+          <div class="navbar-brand">
+                  <a href="index.html">
+                    <h1 class='visible-lg visible-xs'>Documentos digitales</h1>
+                    <div id="logSession"></div>
+                  </a>
+                 
+                </div>
+              <button id="navarButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+        </div> <!-- END OF NAVBAR-HEADER -->
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+              <ul id="nav-list" class="nav navbar-nav navbar-right">
+                  <li>
+                    <a id="home" href="index.html">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <br class="hidden-xs"> 
+                        Home
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logIn" href="login.html">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        <br class="hidden-xs"> 
+                        Iniciar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="register" href="registro.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Registrarse
+                    </a>
+                  </li>
+                  <li>
+                    <a id="logOut" href="#">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        <br class="hidden-xs"> 
+                        Cerrar Sesion
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newSuc" href="registroSucursal.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva sucursal
+                    </a>
+                  </li>
+                  <li>
+                    <a id="newEmp" href="registroEmpleado.html">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        <br class="hidden-xs"> 
+                        Nueva empleado
+                    </a>
+                  </li>
+                  <li>
+                    <a id="lstSuc" href="listaSucursales.html">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        <br class="hidden-xs"> 
+                        Lista sucursales 
+                    </a>
+                  </li>
+              </ul><!-- #nav-list -->
+            </div><!-- END OF collapse .navbar-collapse -->
+      </div>
+    </nav> 
+	</header>
+
+
+  <div id="main-content" class="container">
+  
+  <h2 id="tituloPagina"> Registro de sucursal</h2>
+
+  <!-- FORMULARIO -->
+    <div class="col-sm-8 contact-form">
+      <div class="form-horizontal" >
+        <!-- Nombre -->
+        <div class="form-group">
+          <label class="col-sm-3">Nombre (*)</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputNombre" >
+          </div>
+        </div>
+        <!-- Calle -->
+        <div class="form-group">
+          <label class="col-sm-3">Calle</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputCalle" >
+          </div>
+        </div>
+        <!-- Colonia -->
+        <div class="form-group">
+          <label class="col-sm-3">Colonia</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputColonia" >
+          </div>
+        </div>
+        <!-- Numero Exterior -->
+        <div class="form-group">
+          <label class="col-sm-3 ">Numero Exterior</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputNE" >
+          </div>
+        </div>
+        <!-- Numero Interior -->
+        <div class="form-group">
+          <label class="col-sm-3 ">Numero Interior</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputNI" >
+          </div>
+        </div>
+        <!-- Codigo postal -->
+        <div class="form-group">
+          <label class="col-sm-3 ">Codigo postal</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputCP" >
+          </div>
+        </div>
+        <!-- Ciudad -->
+        <div class="form-group">
+          <label class="col-sm-3 ">Ciudad</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputCiudad" >
+          </div>
+        </div>
+        <!-- Pais -->
+        <div class="form-group">
+          <label class="col-sm-3 ">Pais</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputPais" >
+          </div>
+        </div>
+       
+        <!-- BUTTON -->
+        <button id="btn_registro" class="btn-lg btn btn-success col-sm-offset-7">Registrar</button>
+
+      </div>
+    </div>
+
+
+  </div>
+   
+
+
+  </div>
+
+  
+
+  	<footer class="panel-footer">
+  		<div class="container">
+  			<div class="row">
+  				<section id="info" class="col-sm-8">
+  					<span>Practica realizada como parte de prueba de conocimientos para la empresa docDigitales</span>
+  					<hr class="visible-xs">
+  				</section>
+  				<section id="contact" class="col-sm-4">
+  					<p>Correo electronico: jcom.94m@gmail.com</p>
+            <p>Telefono: (686) 177-9471</p>
+  				</section>
+  			</div>
+  			<div class="text-center">&copy; Derechos reservados Julio Ojeda 2017</div>
+  			
+  		</div>
+  	</footer> <!-- End of the footer -->
+  	
+
+  </div>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ 
+  <script>  
+
+    $(document).ready(function(){
+
+      var warning = false;
+      var waningMessage;
+
+       var verificarCampoVacio = function(variable, etiqueta) {
+
+           if( !variable ){
+            $(etiqueta).addClass('warning');
+            warning = true;
+            waningMessage = "Campos Vacios";
+          }else
+             $(etiqueta).removeClass('warning');
+
+        };
+
+       var verificarNumeroValido= function(variable, etiqueta) {
+
+          if( variable ){
+
+            if ( isNaN(variable) ){
+              warning = true;
+              waningMessage = " \nNumeros invalidos valido\n";
+              $(etiqueta).addClass('warning');
+            }else
+                 $(etiqueta).removeClass('warning');
+
+          }
+       };
+
+
+
+    //REVISA SI HAY ALGUNA SESION ACTIVA
+    if(localStorage.getItem("personlogged") != null && localStorage.getItem("personlogged") != 'undefined' && localStorage.getItem("personlogged") != 'null' && localStorage.getItem("personlogged") != undefined ){
+      //SI HAY SESION
+       $("#logIn").hide();
+       $("#register").hide();
+      $("#newSuc").hide();
+      
+       
+
+      var persona = JSON.parse(localStorage.getItem("personlogged"))
+      $("#logSession").html('En sesion como: '+ persona.nombre);
+
+    }else{
+      //NO HAY SESION
+      $("#logOut").hide();
+      $("#newEmp").hide();
+      $("#newSuc").hide();
+      $("#lstSuc").hide();
+    }
+
+    //SI CIERRA SESION
+     $("#logOut").click(function(){
+
+      localStorage.setItem("personlogged",undefined);
+      window.location.href = "index.html";
+
+     });
+
+    $("#btn_registro").click(function(){
+
+      warning = false;
+      waningMessage = '';
+      
+      var nombre = $("#inputNombre").val();
+      var calle = $("#inputCalle").val();
+      var colonia = $("#inputColonia").val();
+      var numExt = $("#inputNE").val();
+      var numInt = $("#inputNI").val();
+      var cp = $("#inputCP").val();
+      var ciudad = $("#inputCiudad").val();
+      var pais = $("#inputPais").val();
+      
+      
+      
+      //CAMPOS VACIOS
+
+      verificarCampoVacio(nombre,'#inputNombre');
+
+      //VERIFICAR NUMEROS
+
+      verificarNumeroValido(numExt,'#inputNE');
+      verificarNumeroValido(numInt,'#inputNI');
+      verificarNumeroValido(cp,'#inputCP');
+
+      if( warning ){
+        //MENSAJE DE QUE ALGO SALIO MAL
+        alert(waningMessage);
+
+      }else{
+
+        //SE COMUNICA CON EL SERVIDOR
+
+        $.ajax({
+          data: { nombre: nombre ,
+                calle : calle ,
+                colonia : colonia ,
+                numExt : numExt ,
+                numInt : numInt ,
+                cp : cp ,
+                ciudad : ciudad ,
+                pais : pais },
+          url: '../Controlador/controladorSucursal.php?opc=2',
+          method: 'POST', // or GET
+          success: function(msg) {
+            //SI TODO SALE BIEN
+
+              alert(msg);
+
+            //Limpia campos
+            $("#inputNombre").val('');
+            $("#inputCalle").val('');
+            $("#inputColonia").val('');
+            $("#inputNE").val('');
+            $("#inputNI").val('');
+            $("#inputCP").val('');
+            $("#inputCiudad").val('');
+            $("#inputPais").val('');
+          }
+         });
+
+      }
+
+    });
+
+});
+  </script>
+</body>
+</html>
